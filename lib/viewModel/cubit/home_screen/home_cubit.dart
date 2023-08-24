@@ -100,16 +100,16 @@ DioHelper.get(path: doctorPatients,
     });
   }
   deletePatient(int index) {
-    emit(DeleteProductLoading());
+    emit(DeletePatientLoading());
     DioHelper.delete(
         path: "$doctorPatients/${doctorPatient?.data?.allPatient?[index].id ?? 0}",
         token: CacheHelper.getData(SharedKeys.token))
         .then((value) {
       doctorPatient?.data?.allPatient?[index] = AllPatients.fromJson(value.data['data']);
-      emit(DeleteProductSuccess());
+      emit(DeletePatientSuccess());
     }).catchError((error) {
       print(error.toString());
-      emit(DeleteProductError());
+      emit(DeletePatientError());
     });
   }
   updatePatient(int index) {
