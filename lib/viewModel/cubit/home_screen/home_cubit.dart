@@ -99,7 +99,7 @@ DioHelper.get(path: doctorPatients,
       emit(ShowPatientSuccess());
     });
   }
-  deleteCart(int index) {
+  deletePatient(int index) {
     emit(DeleteCartProductLoading());
     DioHelper.delete(
         path: "$doctorPatients/${doctorPatient?.data?.allPatient?[index].id ?? 0}",
@@ -112,7 +112,7 @@ DioHelper.get(path: doctorPatients,
       emit(DeleteCartProductError());
     });
   }
-  updateCartQuantity(int index, int quantity) {
+  updatePatient(int index) {
     emit(UpdatePatientLoading());
     DioHelper.post(
       path: '$doctorPatients/${doctorPatient?.data?.allPatient?[index].id ?? 0}',
