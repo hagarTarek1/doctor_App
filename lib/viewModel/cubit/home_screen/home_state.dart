@@ -12,9 +12,9 @@ class ClearTextSuccess extends HomeState{}
 class ShowPatientSuccess extends HomeState{}
 class ShowPatientError extends HomeState{}
 class ShowPatientLoading extends HomeState{}
-class DeleteCartProductLoading extends HomeState{}
-class DeleteCartProductSuccess extends HomeState{}
-class DeleteCartProductError extends HomeState{}
+class DeleteProductLoading extends HomeState{}
+class DeleteProductSuccess extends HomeState{}
+class DeleteProductError extends HomeState{}
 class UpdatePatientLoading extends HomeState{}
 class UpdatePatientSuccess extends HomeState{}
 class UpdatePatientError extends HomeState{}
